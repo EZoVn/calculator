@@ -4,28 +4,44 @@
 
 @layer components {
   .button {
-    @apply bg-touch-color text-number-color font-bold bg-gray-200 rounded-sm shadow-sm shadow-gray-400 hover:brightness-110 active:translate-y-[1px];
+    @apply bg-touch text-number-color font-bold  rounded-sm shadow-sm shadow-touch-shadow  active:translate-y-[1px] hover:bg-touch-hover;
   }
   .btnResetEquals {
-    @apply bg-touch-color text-number-color font-bold col-span-2 shadow-sm rounded-sm hover:brightness-110 active:translate-y-[1px];
+    @apply font-bold col-span-2 shadow-sm rounded-sm hover:brightness-110 active:translate-y-[1px];
   }
 }
 
 .theme1 {
   --bg-calculator: #252d44;
-  --background-input-color: ##181f32;
+  --background-input-color: #181f32;
   --bg-body: #3b4664;
   --color: #ffffff;
   --number-color: #424a5b;
-  --touch-color: #eae3db;
+  --number-color-delete: #647299;
+  --touch: #eae3db;
+  --touch-hover: #ffffff;
+  --touch-hover-delete: #a2b3e1;
+  --touch-hover-equals: #f96c5b;
+  --touch-equals: #d13f30;
+  --touch-shadow: #b3a398;
+  --touch-shadow-delete: #424e72;
+  --touch-shadow-equals: #90261b;
 }
 .theme2 {
-  --bg-calculator: ##d3cdcd;
-  --background-input-color: ##eeeeee;
+  --bg-calculator: #d3cdcd;
+  --background-input-color: #eeeeee;
   --bg-body: #e6e6e6;
   --color: #37372d;
   --number-color: #36362c;
-  --touch-color: ##e5e4e0;
+  --number-color-delete: #388187;
+  --touch: ##e5e4e0;
+  --touch-hover: #ffffff;
+  --touch-hover-delete: #62b5bd;
+  --touch-hover-equals: #ff8b38;
+  --touch-equals: #c85401;
+  --touch-shadow: #b3a398;
+  --touch-shadow-delete: #1b5f65;
+  --touch-shadow-equals: #853700;
 }
 .theme3 {
   --bg-calculator: #1e0836;
@@ -33,5 +49,13 @@
   --bg-body: #17062a;
   --color: #f2db4b;
   --number-color: #fee53e;
-  --touch-color: #331b4d;
+  --number-color-delete: #56077c;
+  --touch: #331b4d;
+  --touch-hover: #6b34ac;
+  --touch-hover-delete: #8631b0;
+  --touch-hover-equals: #94fff9;
+  --touch-equals: #00decf;
+  --touch-shadow: #b3a398;
+  --touch-shadow-delete: #bf15f4;
+  --touch-shadow-equals: #051636;
 }

@@ -18,7 +18,7 @@
     <div class="flex h-screen items-center justify-center">
       <section id="calculator" class="bg-bg-body m-5 w-80 rounded-lg p-2.5">
         <div class="flex items-center justify-between p-2.5">
-          <p class="text-color">calc</p>
+          <p class="text-color font-bold">calc</p>
           <div class="relative flex items-center">
             <div class="bg-bg-body text-color mx-1 flex flex-col items-center">
               <label for="theme1">1</label>
@@ -34,7 +34,7 @@
             </div>
             <div
               id="toggle"
-              class="absolute bottom-0 left-1 h-4 w-14 cursor-pointer rounded-full bg-gray-300"
+              class="bg-bg-calculator absolute -bottom-0.5 left-1 h-4 w-14 cursor-pointer rounded-full"
             >
               <div
                 id="toggle-ball"
@@ -46,13 +46,17 @@
 
         <div
           id="output"
-          class="mx-2 flex justify-end rounded-sm bg-indigo-950 p-4 text-white"
+          class="bg-background-input-color text-color mx-2 flex justify-end rounded-sm p-4 font-medium"
         ></div>
         <div class="buttons grid grid-cols-4 gap-3 p-2">
           <button class="button">7</button>
           <button class="button">9</button>
           <button class="button">8</button>
-          <button class="button bg-sky-600 shadow-sky-800">DEL</button>
+          <button
+            class="button bg-number-color-delete shadow-touch-shadow-delete hover:bg-touch-hover-delete text-white"
+          >
+            DEL
+          </button>
           <button class="button">4</button>
           <button class="button">5</button>
           <button class="button">6</button>
@@ -65,13 +69,15 @@
           <button class="button">0</button>
           <button class="button">/</button>
           <button class="button">*</button>
-          <button class="btnResetEquals bg-sky-600 shadow-sky-800">
+          <button
+            class="btnResetEquals bg-number-color-delete shadow-touch-shadow-delete hover:bg-touch-hover-delete text-white"
+          >
             Reset
           </button>
           <button
             value="="
             id="equals"
-            class="btnResetEquals bg-red-400 shadow-red-600"
+            class="btnResetEquals bg-touch-equals shadow-touch-shadow-equals hover:bg-touch-hover-equals"
           >
             =
           </button>

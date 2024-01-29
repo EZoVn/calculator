@@ -546,21 +546,18 @@ video {
 
 .button {
   border-radius: 0.125rem;
-  background-color: var(--touch-color);
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: var(--touch);
   font-weight: 700;
   color: var(--number-color);
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  --tw-shadow-color: #9ca3af;
+  --tw-shadow-color: var(--touch-shadow);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
 .button:hover {
-  --tw-brightness: brightness(1.1);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  background-color: var(--touch-hover);
 }
 
 .button:active {
@@ -571,9 +568,7 @@ video {
 .btnResetEquals {
   grid-column: span 2 / span 2;
   border-radius: 0.125rem;
-  background-color: var(--touch-color);
   font-weight: 700;
-  color: var(--number-color);
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -597,8 +592,12 @@ video {
   position: relative;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.-bottom-0 {
+  bottom: -0px;
+}
+
+.-bottom-0\.5 {
+  bottom: -0.125rem;
 }
 
 .left-0 {
@@ -699,18 +698,20 @@ video {
   border-radius: 0.125rem;
 }
 
+.bg-background-input-color {
+  background-color: var(--background-input-color);
+}
+
 .bg-bg-body {
   background-color: var(--bg-body);
 }
 
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+.bg-bg-calculator {
+  background-color: var(--bg-calculator);
 }
 
-.bg-indigo-950 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 27 75 / var(--tw-bg-opacity));
+.bg-number-color-delete {
+  background-color: var(--number-color-delete);
 }
 
 .bg-orange-500 {
@@ -718,14 +719,8 @@ video {
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
-}
-
-.bg-sky-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+.bg-touch-equals {
+  background-color: var(--touch-equals);
 }
 
 .p-2 {
@@ -740,6 +735,14 @@ video {
   padding: 1rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
 .text-color {
   color: var(--color);
 }
@@ -749,13 +752,13 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.shadow-red-600 {
-  --tw-shadow-color: #dc2626;
+.shadow-touch-shadow-delete {
+  --tw-shadow-color: var(--touch-shadow-delete);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.shadow-sky-800 {
-  --tw-shadow-color: #075985;
+.shadow-touch-shadow-equals {
+  --tw-shadow-color: var(--touch-shadow-equals);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -771,20 +774,36 @@ video {
 
 .theme1 {
   --bg-calculator: #252d44;
-  --background-input-color: ##181f32;
+  --background-input-color: #181f32;
   --bg-body: #3b4664;
   --color: #ffffff;
   --number-color: #424a5b;
-  --touch-color: #eae3db;
+  --number-color-delete: #647299;
+  --touch: #eae3db;
+  --touch-hover: #ffffff;
+  --touch-hover-delete: #a2b3e1;
+  --touch-hover-equals: #f96c5b;
+  --touch-equals: #d13f30;
+  --touch-shadow: #b3a398;
+  --touch-shadow-delete: #424e72;
+  --touch-shadow-equals: #90261b;
 }
 
 .theme2 {
-  --bg-calculator: ##d3cdcd;
-  --background-input-color: ##eeeeee;
+  --bg-calculator: #d3cdcd;
+  --background-input-color: #eeeeee;
   --bg-body: #e6e6e6;
   --color: #37372d;
   --number-color: #36362c;
-  --touch-color: ##e5e4e0;
+  --number-color-delete: #388187;
+  --touch: ##e5e4e0;
+  --touch-hover: #ffffff;
+  --touch-hover-delete: #62b5bd;
+  --touch-hover-equals: #ff8b38;
+  --touch-equals: #c85401;
+  --touch-shadow: #b3a398;
+  --touch-shadow-delete: #1b5f65;
+  --touch-shadow-equals: #853700;
 }
 
 .theme3 {
@@ -793,5 +812,21 @@ video {
   --bg-body: #17062a;
   --color: #f2db4b;
   --number-color: #fee53e;
-  --touch-color: #331b4d;
+  --number-color-delete: #56077c;
+  --touch: #331b4d;
+  --touch-hover: #6b34ac;
+  --touch-hover-delete: #8631b0;
+  --touch-hover-equals: #94fff9;
+  --touch-equals: #00decf;
+  --touch-shadow: #b3a398;
+  --touch-shadow-delete: #bf15f4;
+  --touch-shadow-equals: #051636;
+}
+
+.hover\:bg-touch-hover-delete:hover {
+  background-color: var(--touch-hover-delete);
+}
+
+.hover\:bg-touch-hover-equals:hover {
+  background-color: var(--touch-hover-equals);
 }
