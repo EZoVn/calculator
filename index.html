@@ -14,39 +14,53 @@
     <script src="script.js" defer></script>
     <title>Calculator</title>
   </head>
-  <body class="theme1 flex h-screen items-center justify-center">
-    <div class="flex h-screen items-center justify-center">
-      <section id="calculator" class="bg-bg-body m-5 w-80 rounded-lg p-2.5">
+  <body class="theme1">
+    <div class="flex h-screen justify-center min-[424px]:items-center">
+      <section
+        id="calculator"
+        class="bg-bg-body m-5 h-80 w-screen rounded-lg p-2.5 min-[424px]:w-80"
+      >
         <div class="flex items-center justify-between p-2.5">
-          <p class="text-color font-bold">calc</p>
-          <div class="relative flex items-center">
-            <div class="bg-bg-body text-color mx-1 flex flex-col items-center">
-              <label for="theme1">1</label>
-              <input type="radio" id="theme1" name="theme" value="theme1" />
-            </div>
-            <div class="bg-bg-body text-color mx-1 flex flex-col items-center">
-              <label for="theme2">2</label>
-              <input type="radio" id="theme2" name="theme" value="theme2" />
-            </div>
-            <div class="bg-bg-body text-color mx-1 flex flex-col items-center">
-              <label for="theme3">3</label>
-              <input type="radio" id="theme3" name="theme" value="theme3" />
-            </div>
-            <div
-              id="toggle"
-              class="bg-bg-calculator absolute -bottom-0.5 left-1 h-4 w-14 cursor-pointer rounded-full"
-            >
+          <p class="text-color font-bold min-[424px]:text-2xl">calc</p>
+          <div class="flex items-end">
+            <p class="text-color text-xs font-bold uppercase min-[424px]:mr-2">
+              Theme
+            </p>
+            <div class="relative flex items-center">
               <div
-                id="toggle-ball"
-                class="absolute left-0 top-0 h-4 w-4 rounded-full bg-orange-500 transition-all duration-300"
-              ></div>
+                class="bg-bg-body text-color mx-1 flex flex-col items-center"
+              >
+                <label for="theme1">1</label>
+                <input type="radio" id="theme1" name="theme" value="theme1" />
+              </div>
+              <div
+                class="bg-bg-body text-color mx-1 flex flex-col items-center"
+              >
+                <label for="theme2">2</label>
+                <input type="radio" id="theme2" name="theme" value="theme2" />
+              </div>
+              <div
+                class="bg-bg-body text-color mx-1 flex flex-col items-center"
+              >
+                <label for="theme3">3</label>
+                <input type="radio" id="theme3" name="theme" value="theme3" />
+              </div>
+              <div
+                id="toggle"
+                class="bg-bg-calculator absolute -bottom-0.5 left-1 h-4 w-14 cursor-pointer rounded-full"
+              >
+                <div
+                  id="toggle-ball"
+                  class="bg-touch-equals hover:bg-touch-hover-equals absolute left-0 top-0 h-4 w-4 rounded-full transition-all duration-300"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
 
         <div
           id="output"
-          class="bg-background-input-color text-color mx-2 flex justify-end rounded-sm p-4 font-medium"
+          class="bg-background-input-color text-color mx-2 flex justify-end rounded-md p-4 font-medium"
         ></div>
         <div class="buttons grid grid-cols-4 gap-3 p-2">
           <button class="button">7</button>
