@@ -30,7 +30,7 @@ function handleButtonClick(event) {
 
 const themeSwitch = document.querySelectorAll('input[name="theme"]');
 const calculatorSection = document.getElementById('calculator');
-
+const body = document.body;
 
 const toggle = document.getElementById('toggle');
 const toggleBall = document.getElementById('toggle-ball');
@@ -39,8 +39,8 @@ let toggleState = 0;
 
 toggle.addEventListener('click', () => {
   toggleState = (toggleState + 1) % 3;
-  console.log(toggleState);
   toggleBall.style.left = `${toggleState * 1.25}rem`;
   themeSwitch[toggleState].checked = true;
-  calculatorSection.classList = `theme${toggleState + 1}`;
+  // calculatorSection.classList = `theme${toggleState + 1}`;
+  body.classList = `theme${toggleState + 1}`;
 });
